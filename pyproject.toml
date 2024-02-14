@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "aesopdocs-action"
+version = "0.0.1"
+description = ""
+authors = ["Achilleas Athanasiou Fragkoulis <achilleasatha@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+bumpver = "^2023.1129"
+pyyaml = "^6.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.bumpver]
+current_version = "0.0.1"
+version_pattern = "MAJOR.MINOR.PATCH[PYTAGNUM]"
+commit = true
+commit_message = "bump version {old_version} -> {new_version}"
+tag = true
+push = true
+bump_files = ["pyproject.toml"]
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"',
+    'version = "{pep440_version}"'
+]
+"aesopdocs/__init__.py" = [
+    '__version__ = "{pep440_version}"'
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
