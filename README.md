@@ -1,21 +1,35 @@
 # AesopDocs
 AesopDocs is a GitHub action used to automatically generate documentation for your repo. 
 
+If you add it as part of your GitHub Actions workflows, upon activating the trigger mechanism
+that you specify, it will go over your repository, generate UML and class diagrams, generate 
+high-level documentation and create a PR for it. 
+
+Additional configuration options allow you to select whether you'd like it to also produce docstring
+for any modified or newly introduced methods and/or classes.
+
 ### Set-up instructions
-TODO: add usage instructions for end-users
+As a bear minimum you need to provide a valid GITHUB_ACCESS_TOKEN for AesopDocs to be able to interact
+with your repo. 
 
-We recommend creating a README file to help people learn how to use your action. You can include this information in your README.md:
+Here are the required permissions:
+### TODO
+- specify minimal set of permission required on access token
+- Required input and output arguments
+- Optional input and output arguments
+- Environment variables the action uses
 
-A detailed description of what the action does
-Required input and output arguments
-Optional input and output arguments
-Secrets the action uses
-Environment variables the action uses
-An example of how to use your action in a workflow
-
+Here's a simple example of how you can use this as part of an existing GitHub Actions workflow:
 ```bash
-example of workflow file demonstating use
-
 steps:
-  - uses: actions/aesopdocs-action@v1
+  - name: Generate docs
+    uses: actions/aesopdocs-action@v1
+    with: 
+      branch: 'main'
+      github_access_token: ${{ secrets.ACCESS_TOKEN }}
+```
+
+Here's another example with illustrating the use of the additional options you can use to configure it
+```bash
+TODO add example here
 ```
