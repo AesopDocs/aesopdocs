@@ -1,0 +1,15 @@
+name: 'Generate Docs'
+description: 'Generates documentation'
+inputs:
+  repository_url:
+    description: 'Which repo to produce docs for'
+    required: true
+  branch:
+    description: 'The target branch to produce docs for'
+    required: false
+    default: 'main'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+#  args:
+#    - ${{ inputs.arg }}
