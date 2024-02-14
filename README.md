@@ -1,4 +1,6 @@
 # AesopDocs
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAesopDocs%2Faesopdocs-action.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FAesopDocs%2Faesopdocs-action?ref=badge_shield)
+
 AesopDocs is a GitHub action used to automatically generate documentation for your repo. 
 
 If you add it as part of your GitHub Actions workflows, upon activating the trigger mechanism
@@ -33,3 +35,6 @@ Here's another example with illustrating the use of the additional options you c
 ```bash
 TODO add example here
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAesopDocs%2Faesopdocs-action.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FAesopDocs%2Faesopdocs-action?ref=badge_large)
